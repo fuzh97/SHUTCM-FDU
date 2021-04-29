@@ -123,7 +123,7 @@ def svm_test(train_X, train_Y, test_X, test_Y, svm):
 
 for i in range(len(list_feature)):
     # 循环训练模型
-    # 使用各自的样本集，使用split函数做划分，训练集与测试集划分比例4：1
+    # 使用各自的样本集，使用split函数做划分，训练集与测试集划分比例4：1 调整随机数种子来调整样本划分情况
     global svm
     train, test = train_test_split(data, test_size=0.2, random_state=43)# 30 38 39 42
     train_X = train[list_feature[i]]
