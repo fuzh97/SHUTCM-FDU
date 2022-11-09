@@ -142,7 +142,7 @@ for rs in range(0, 100):
 
     for i in range(len(list_feature)):
         global svm
-        train, test = train_test_split(data, test_size=0.2, random_state=rs) # 2,23,28,34,36
+        train, test = train_test_split(data, test_size=0.2, random_state=rs) 
         train_X = train[list_feature[i]]
         train_Y = train['sample']
         test_X = test[list_feature[i]]
@@ -157,7 +157,7 @@ for i in range(len(list_feature)):
     # 循环训练模型
     # 使用各自的样本集，使用split函数做划分，训练集与测试集划分比例4：1
     global svm
-    train, test = train_test_split(data, test_size=0.2, random_state=0)  # 28 30 34 38 52 79 80 98
+    train, test = train_test_split(data, test_size=0.2, random_state=0)  
     train_X = train[list_feature[i]]
     train_Y = train['sample']
     test_X = test[list_feature[i]]
@@ -188,7 +188,7 @@ roc_auc = auc(fpr, tpr)
 
 # 使用另一个样本集做验证，使用split函数做划分，训练集与测试集划分比例4：1
 
-train, test = train_test_split(data_test, test_size=0.2, random_state=4)  # 3,0.714
+train, test = train_test_split(data_test, test_size=0.2, random_state=4)
 train_X = train[list_feature[best]]
 train_Y = train['sample']
 test_X = test[list_feature[best]]
